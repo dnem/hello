@@ -1,5 +1,5 @@
 ---
 applications:
-- name: hello
+- name: pcfdemo-go
   memory: 8M
-  host: hello
+  host: pcfdemo-go
