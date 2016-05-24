@@ -1,6 +1,0 @@
-hash: 15f930a6446ade1a8b040fda6e92e6f5803a6900ca96fafe8e3e74a88aa6722e
-updated: 2016-05-24T16:49:40.941147102-05:00
-imports:
-- name: github.com/codegangsta/negroni
-  version: ffbc66b612ee3eac2eba29aedce4c3a65e4dd0a1
-devImports: []
