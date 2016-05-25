@@ -1,0 +1,8 @@
+#! /bin/bash
+
+rm -rf push
+mkdir push
+cp ./manifest.yml push/
+cp ./Procfile push/
+GOOS=linux GOARCH=amd64 go build -o push/hello
+

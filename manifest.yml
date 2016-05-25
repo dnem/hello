@@ -3,6 +3,4 @@ applications:
 - name: pcfdemo-go
   memory: 8M
   host: pcfdemo-go
-  buildpack: go_buildpack
-  env:
-    GOPACKAGENAME: github.com/dnem/hello
+  buildpack: binary_buildpack
