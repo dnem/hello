@@ -41,5 +41,5 @@ func hello(res http.ResponseWriter, req *http.Request) {
 }
 
 func nonroot(res http.ResponseWriter, req *http.Request) {
-	fmt.Fprintln(res, "Hello from somplace that is not the root!")
+	fmt.Fprintln(res, "Hello from some non-root endpoint!")
 }
