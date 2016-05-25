@@ -14,9 +14,21 @@ func main() {
 		port = "3000"
 	}
 
+	cr := os.Getenv("CONTEXT_ROOT")
+	if len(cr) == 0 {
+		cr = ""
+	} else {
+		if string(cr[0]) != "/" {
+			cr = "/" + cr
+		}
+		if string(cr[len(cr)-1]) == "/" {
+			cr = cr[:len(cr)-1]
+		}
+	}
+
 	mux := http.NewServeMux()
-	mux.HandleFunc("/", hello)
-	mux.HandleFunc("/nonroot", nonroot)
+	mux.HandleFunc(cr+"/", hello)
+	mux.HandleFunc(cr+"/nonroot", nonroot)
 
 	n := negroni.Classic()
 	n.UseHandler(mux)
